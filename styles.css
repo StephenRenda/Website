@@ -13,23 +13,44 @@ body {
 .nav-wrapper {
 	display: flex;
 	justify-content: space-between;
-	padding: 38px;
+	background: rgba( 255, 255, 255, 0.97);
+	padding-left: 38px;
+	padding-right: 38px;
+	padding-top: 25px;	
+	padding-bottom: 25px;
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
+
 .left-side {
 	display: flex;
 	
 }
 .nav-wrapper > .left-side > div{
 	margin-right: 20px;
-	font-size: 0.9em;
+	font-size: 1.5em;
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
+.right-side {
+	margin-top: 10px;
+}
+
 .nav-link-wrapper {
-	height: 22px;
+	height: 40px;
 	border-bottom: 1px solid transparent;
 	transition: border-bottom 0.5s;
 }
+
+.nav-link-wrapper.scrolled {
+	color: white;
+	height: 40px;
+	border-bottom: 1px solid transparent;
+	transition: border-bottom 0.5s;
+}
+
 
 .nav-link-wrapper a {
 	color: #8a8a8a;
@@ -42,13 +63,17 @@ body {
 .nav-link-wrapper a:hover {
 	color: black;
 }
-
 .active-nav-link {
 	border-bottom: 1px solid black;
 }
 
 .active-nav-link a {
 	color: black !important;
+}
+
+.content-wrapper {
+	z-index: auto; /*So nav can be on top when scrolling*/
+	height: 1500px;
 }
 
 /* Portfolio styles */
@@ -66,8 +91,9 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+
 }
- .img-text-wrapper {
+.img-text-wrapper {
 	 position: absolute;
 	 top: 0;
 	 display: flex;
@@ -78,7 +104,7 @@ body {
 	 text-align:center;
 	 padding-left: 100px;
 	 padding-right: 100px;
- }
+}
 
 .logo-wrapper img{
 	width: 50%;
@@ -96,9 +122,27 @@ body {
 	color: lightseagreen;
 }
 .img-darken {
-		transition: 1s;
-		filter: brightness(10%);
+	transition: 1s;
+	filter: grayscale(80%) brightness(50%);
 		
+}
+/*view*/
+.picture-wrapper {
+	width: auto;
+	height: 1000px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.final-message {
+	padding-top: 950px;
+}
+.square{
+    width: 100%;
+    height: 25px;
+    background-color: rgba( 255, 255, 255, 0.5);
+	padding:10px;
+
 }
  /* About page styles*/
  .two-column-wrapper {
@@ -124,4 +168,17 @@ body {
     align-items: center;
     justify-content: center;
 }
+/*todo*/
 
+/*end todo*/
+
+/*Recipes*/
+
+.recipe-image-wrapper {
+	padding-top: 100px;
+	padding-left: 300px;
+}
+/*Message */
+.message-container {
+	padding: 30px;
+}
